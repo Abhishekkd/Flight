@@ -12,5 +12,6 @@ function togglePaymentDetails(paymentId) {
 }
 
 function confirmPayment() {
-    alert("Payment has been confirmed.");
+        // Redirect to the loader.html page
+    window.location.href = "loader.html";
 }
