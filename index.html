@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="icons8-flight-100.png" alt="Logo" class="logo-img">
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Flights</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">My Account</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Info Section -->
+        <div class="user-info">
+            <img src="woman-user-color-icon.svg" alt="User" class="user-img">
+            <span class="user-name">John Doe</span>
+            <button class="logout-btn">Logout</button>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="booking-container">
+        <h2 class="booking-title">Book a Flight</h2>
+        <form class="booking-form">
+            <!-- Trip Type -->
+            <div class="trip-type">
+                <label>
+                    <input type="radio" name="trip" value="oneway" id="oneway" checked> One Way
+                </label>
+                <label>
+                    <input type="radio" name="trip" value="roundtrip" id="roundtrip"> Round Trip
+                </label>
+                <label>
+                    <input type="radio" name="trip" value="multicity" id="multicity"> Multi City
+                </label>
+            </div>
+
+            <!-- From & To -->
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="from">From</label>
+                    <input id="from" type="text" placeholder="Delhi, DEL" required>
+                </div>
+                <div class="input-field">
+                    <label for="to">To</label>
+                    <input id="to" type="text" placeholder="Going to?" required>
+                </div>
+            </div>
+
+            <!-- Departure & Return -->
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="departure">Departure</label>
+                    <input id="departure" type="date" required>
+                </div>
+                <div class="input-field">
+                    <label for="return">Return</label>
+                    <input id="return" type="date">
+                </div>
+            </div>
+
+            <!-- Travelers and Payment -->
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="travelers">Travelers</label>
+                    <select id="travelers" required>
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="payment">Pay with</label>
+                    <select id="payment" required>
+                        <option value="cash">Cash</option>
+                        <option value="credit">Credit Card</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="additional-options">
+                <a href="#">+ ADD PROMOCODE</a>
+                <button type="submit" class="subscribe-btn">Search</button>
+            </div>
+
+        </form>
+
+            <div class="subscribe-section">
+                <p class="subscribe-section-text">Plan Ahead, Travel Smarter: Exclusive Subscription for Frequent Flyers!</p>
+                <div>
+                    <button class="subscribe-btn" onclick="redirectToSubscription()">Subscription Plans</button>
+                </div>
+            </div>
+    </div>
+</main>
+
+
+
+<footer class="footer">
+    <div class="container-footer">
+        <p>&copy; 2024 Flight Booking App</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

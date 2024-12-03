@@ -1,0 +1,618 @@
+/* General Styling */
+html,
+body {
+    height: 100%;
+    /* Ensure full height */
+    width: 100%;
+    /* Ensure full width */
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex container for body */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Ensure body takes full width */
+}
+
+/* Main content should take available space and full width */
+.main-content {
+    flex-grow: 1;
+    width: 100%;
+    /* Ensure main content takes full width */
+    padding: 2rem;
+    /* Optional, can adjust based on your design */
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    width: 100%;
+    /* Ensure footer takes full width */
+}
+
+/* Footer */
+.container-font {
+padding: 0rem 20rem;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.user-info {
+    font-size: 1rem;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.booking-container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    margin-top: 3rem;
+}
+
+.booking-form .trip-type {
+    margin-bottom: 1rem;
+}
+
+.trip-type label {
+    margin: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.input-field:last-child {
+    margin-right: 0;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-field input,
+.input-field select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.additional-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.additional-options a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.additional-options button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.additional-options button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.subscription-container {
+    margin: 2rem;
+}
+
+.insights,
+.plans {
+    margin: 1rem 0;
+}
+
+.plan {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.plan h3 {
+    color: #007bff;
+}
+
+.plan button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.plan button:hover {
+    background-color: #0056b3;
+}
+
+/* Subscription Plans */
+.plans-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.plan {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 22%;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #004a45;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #004a45;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #777;
+}
+
+.price-annual {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn-trial,
+.btn-buy {
+    display: block;
+    background-color: #004a45;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.btn-buy:hover,
+.btn-trial:hover {
+    background-color: #00665b;
+}
+
+.benefits {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.benefits li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Most Popular Plan */
+.plan.popular {
+    border: 2px solid #004a45;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: #004a45;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* Header Section */
+.header {
+    background-color: #004a45;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    height: 40px;
+    /* Adjust based on your logo's size */
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffd700;
+    /* Hover effect color */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #e50000;
+}
+
+/* Subscribe Button Styling */
+.subscribe-section button {
+    background-color: #004a45;
+    /* Dark Blue */
+    color: white;
+    padding: 12px 24px;
+    /* Increased padding for a more prominent button */
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top:  1rem;
+    /* Subtle shadow for depth */
+}
+
+.subscribe-section button:hover {
+    background-color: #007bff;
+    /* Lighter blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+.subscribe-section button:active {
+    background-color: #0056b3;
+    /* Darker blue when clicked */
+    transform: translateY(1px);
+    /* Slight dip effect when active */
+}
+
+.subscribe-section button:focus {
+    outline: none;
+    /* Removes default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    /* Add focus ring */
+}
+
+/* General Section Styling */
+.traveler-insights {
+    padding: 2rem;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.traveler-insights h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Insight Cards Layout */
+.insight-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+/* Individual Insight Card Styling */
+.insight-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card h3 {
+    color: #004a45;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.insight-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .insight-cards {
+        flex-direction: column;
+    }
+
+    .insight-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+/* Family Plans Section */
+.family-plans-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Family Plans Text */
+.family-plans-text {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    /* Adds space between the text and the button */
+    line-height: 1.5;
+}
+
+/* Family Plans Button */
+.family-plans-btn {
+    margin-left: 0%;
+    /* Adjusts the button position to the right */
+    margin-top: 1rem;
+    /* Adds spacing between the text and button */
+}
+
+.family-plans-btn button {
+    background-color: #004a45;
+    /* Dark Blue */
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    /* Rounded corners */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.family-plans-btn button:hover {
+    background-color: #007bff;
+    /* Lighter blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+.family-plans-btn button:active {
+    background-color: #0056b3;
+    /* Darker blue when clicked */
+    transform: translateY(1px);
+    /* Slight dip effect when active */
+}
+
+.family-plans-btn button:focus {
+    outline: none;
+    /* Removes default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    /* Add focus ring */
+}
+
+/* Underline the list items */
+.underline {
+    text-decoration: underline;
+}
+
+.benefits {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* Price Styling */
+.original-price {
+    text-decoration: line-through;
+    color: #f00;
+    /* Red color for strikethrough */
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.discounted-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004a45;
+}
+
+/* Update the plan layout for clarity */
+.plan {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    margin: 1rem;
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #004a45;
+}
+
+.benefits li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Popular Plan Badge */
+.plan.popular {
+    border: 2px solid #004a45;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: #004a45;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* Subscription Section */
+.subscribe-section {
+    background-color: #e9f7f7;
+    padding: 30px;
+    text-align: center;
+    margin-top: 90px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-section-text {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subscribe-btn {
+    background-color: #004a45;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #008080;
+}

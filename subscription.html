@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="icons8-flight-100.png" alt="Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Flights</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <img src="woman-user-color-icon.svg" alt="User" class="user-img">
+                <span class="user-name">John Doe</span>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="subscription-container">
+            <section class="traveler-insights">
+                <h2>Traveler Insights</h2>
+                <div class="insight-cards">
+                    <div class="insight-card">
+                        <h3>Traveler Profile</h3>
+                        <p><strong>Age:</strong> 32</p>
+                        <p><strong>Tier Level:</strong> SILVER</p>
+                        <p><strong>Seat Preference:</strong> WINDOW</p>
+                        <p><strong>Meal Preference:</strong> VGML</p>
+                        <p><strong>Baggage:</strong> 1 Carry-On, 2 Checked</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Travel History</h3>
+                        <p><strong>Preferred Cabin:</strong> PREMIUM ECONOMY</p>
+                        <p><strong>Most Booked Ancillary:</strong> XBAG</p>
+                        <p><strong>Preferred Travel Class:</strong> Y</p>
+                        <p><strong>Preferred Payment Method:</strong> PAYPAL</p>
+                        <p><strong>Most Frequent Trips:</strong> NCE to LON, PAR to NYC</p>
+                    </div>
+                </div>
+            </section>
+
+            <h2>Subscription Plans</h2>
+            <div class="plans-container">
+                <!-- Basic Plan -->
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p class="price">
+                        <span class="original-price">$1500</span>
+                        <span class="discounted-price">$1360/year</span>
+                    </p>
+                    <button class="btn-buy" onclick="subscribe('Basic')">Buy Now →</button>
+                    <ul class="benefits">
+                        <li><span >4 free round trips (Savings: $600)</span></li>
+                        <li><span >Discount on remaining trips (6 trips): $810 (Savings: $90)</span>
+                        </li>
+                        <li><span >Seat selection: $50 saved</span></li>
+                    </ul>
+                    <div class="highlight-savings">
+                        <p><strong>Net Savings: <span class="savings-highlight">$140/year (9% savings)</span></strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="plan popular">
+                    <h3>Pro Plan</h3>
+                    <p class="price">
+                        <span class="original-price">$1500</span>
+                        <span class="discounted-price">$1105/year</span>
+                    </p>
+                    <div class="badge">Most Popular</div>
+                    <button class="btn-buy" onclick="subscribe('Pro')">Buy Now →</button>
+                    <ul class="benefits">
+                        <li><span >8 free round trips (Savings: $1200)</span></li>
+                        <li><span >Discount on remaining trips (2 trips): $255 (Savings: $45)</span>
+                        </li>
+                        <li><span >Seat selection: $50 saved</span></li>
+                    </ul>
+                    <div class="highlight-savings">
+                        <p><strong>Net Savings: <span class="savings-highlight">$395/year (26% savings)</span></strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="plan">
+                    <h3>Elite Plan</h3>
+                    <p class="price">
+                        <span class="original-price">$1500</span>
+                        <span class="discounted-price">$1100/year</span>
+                    </p>
+                    <button class="btn-buy" onclick="subscribe('Elite')">Buy Now →</button>
+                    <ul class="benefits">
+                        <li><span >10 free round trips (Savings: $1500)</span></li>
+                        <li><span >Upgrades: $200 saved</span></li>
+                        <li><span >Seat selection: $50 saved</span></li>
+                    </ul>
+                    <div class="highlight-savings">
+                        <p><strong>Net Savings: <span class="savings-highlight">$400/year (27% savings)</span></strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="family-plans-section">
+                <p class="family-plans-text">Explore Family Subscription Plans and Save More on Your Travels!</p>
+                <div class="family-plans-btn" onclick="redirectToSubscription()">
+                    <button>Family Plans</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>&copy; 2024 Flight Booking App</p>
+        </div>
+    </footer>
+
+    <script src="subscription.js"></script>
+</body>
+
+</html>
