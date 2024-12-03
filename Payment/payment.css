@@ -1,0 +1,520 @@
+/* General Styling */
+html,
+body {
+    height: 100%;
+    /* Ensure full height */
+    width: 100%;
+    /* Ensure full width */
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex container for body */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Ensure body takes full width */
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+
+
+.user-info {
+    font-size: 1rem;
+}
+
+.header {
+    background-color: #004a45;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    height: 40px;
+    /* Adjust based on your logo's size */
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffd700;
+    /* Hover effect color */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #e50000;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    width: 100%;
+    /* Ensure footer takes full width */
+}
+
+/* Footer */
+.container-font {
+padding: 0rem 20rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Payment Section Styling */
+.payment-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;  /* Ensure full width */
+    max-width: 1200px;  /* Set a max-width for large screens */
+    margin: 0 auto;
+    padding: 35px 20px 40px;
+    background-color: #fff;
+    align-items: stretch;
+}
+
+.payment-options {
+    width: 60%; /* Ensure this takes 60% of the page width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.booking-details {
+    width: 100%; /* Ensure this takes 40% of the page width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.payment-options h2, .booking-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-method {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-method h3 {
+    font-size: 1.3rem;
+    color: #004a45;
+    margin-bottom: 10px;
+}
+
+.payment-method:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.payment-details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.payment-details label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.payment-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Pay Button */
+.pay-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #004a45;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 20%;
+}
+
+.pay-btn:hover {
+    background-color: #007c72;
+}
+
+/* Booking Details Styling */
+.booking-details {
+    width: 100%; /* Ensure this takes 40% of the page width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.booking-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.detail {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    margin-left: 10px;
+}
+
+
+
+/* General Styling */
+/* html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
+/* Full-screen Container */
+.container-pay {
+    display: flex;
+    width: 100%;
+    height: 100%;  /* Takes full height of the screen */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Payment Options (Left) */
+.payment-options {
+    width: 60%;  /* Takes 50% of the available width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Booking Details (Right) */
+.booking-details {
+    width: 100%;  /* Takes 50% of the available width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Styling for the Payment Methods */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+.payment-method {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-method h3 {
+    font-size: 1.3rem;
+    color: #004a45;
+    margin-bottom: 10px;
+}
+
+.payment-method:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.payment-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.payment-details input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Services Added Section (Below Booking Details) */
+.services-added {
+    width: 100%;  /* Takes 100% width within container */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px; /* Add space between the booking details and services section */
+}
+
+/* Pay Now Button */
+.pay-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #004a45;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 10%; /* Set button width to 30% */
+    text-align: center;
+    transition: background-color 0.3s;
+    position: absolute; /* Position button absolutely */
+    right: 200px; /* Align button to the right side */
+    top: 910px;
+    /* bottom: 20px; Add space from the bottom */
+}
+
+.price-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 10%; /* Set button width to 30% */
+    text-align: center; 
+    /* border: 0.5px solid red; */
+    position: absolute; /* Position button absolutely */
+    right: 400px; /* Align button to the right side */
+    top: 930px;
+    /* bottom: 20px; Add space from the bottom */
+}
+
+.edit-btn {
+    background-color: #0095e5;
+    color: white;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+.pay-btn:hover {
+    background-color: #007c72;
+}
+
+/* Styling for Booking Details */
+/* Styling for Booking Details and Services Added */
+.booking-details h2, .services-added h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.detail {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    margin-left: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+/* Flight Details Header */
+.flight-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    /* border: 1px solid #ddd; */
+    border-bottom: 2px solid #ddd;
+    padding: 40px 40px; /* Increased padding for more height */
+    /* border-radius: 8px; */
+    margin-bottom: 0px;
+    margin-left:139px;
+    margin-right:139px;
+    margin-top: 40px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    min-height: 40px; /* Ensure consistent minimum height */
+}
+
+.flight-details-header .flight-date p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.flight-details-header .flight-route {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flight-route .origin,
+.flight-route .destination {
+    text-align: center;
+}
+
+.flight-route .airport-code {
+    font-size: 22px; /* Slightly larger text */
+    font-weight: bold;
+    color: #2c6b44; /* Dark green for airport code */
+    margin: 0;
+}
+
+.flight-route .route-info {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.route-info .plane-icon {
+    color: #388e3c; /* Green icon color */
+    font-size: 20px; /* Slightly larger plane icon */
+}
+
+.route-info .separator {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin: 0 10px;
+}
+
+.route-info .info-text {
+    font-size: 16px; /* Larger text for readability */
+    font-weight: bold;
+    color: #2c6b44; /* Dark green */
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: red;
+}

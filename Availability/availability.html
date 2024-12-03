@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Page</title>
+  <link rel="stylesheet" href="availability.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <img src="../icons8-flight-100.png" alt="Logo" class="logo-img">
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Flights</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">My Account</a></li>
+        </ul>
+      </nav>
+
+      <!-- User Info Section -->
+      <div class="user-info">
+        <img src="../woman-user-color-icon.svg" alt="User" class="user-img">
+        <span class="user-name">John Doe</span>
+        <button class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="flight-details-header">
+      <div class="flight-date">
+        <p>FRI, 06 DEC 24</p>
+      </div>
+      <div class="flight-route">
+        <div class="origin">
+          <p class="airport-code">DEL</p>
+        </div>
+        <div class="route-info">
+          <span class="plane-icon">✈️</span>
+          <span class="separator">-------</span>
+          <span class="info-text">Departure</span>
+          <span class="separator">-------</span>
+          <span class="plane-icon">✈️</span>
+        </div>
+        <div class="destination">
+          <p class="airport-code">BLR</p>
+        </div>
+      </div>
+      <div class="flight-date">
+        <p>2ADT Passengers</p>
+      </div>
+    </div>
+
+    <div class="recommendations">
+      <h1>Recommended Flights</h1>
+      <div class="recommendation-cards">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="badge">YOUR PREFERRED DEPARTURE TIME</div>
+          <div class="flight-details">
+            <div class="time">07:20 - 10:00</div>
+            <div class="duration">02h 40m | Nonstop</div>
+            <div class="price"><span class="strikethrough">$120.14</span> $0</div>
+            <button class="select-btn" onclick="window.location.href='../Payment/payment.html'">Select</button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="badge best-value">Best Value</div>
+          <div class="flight-details">
+            <div class="time">14:25 - 20:35</div>
+            <div class="duration">06h 10m | 1 Stop</div>
+            <div class="price"><span class="strikethrough">$129.72</span> $0</div>
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="badge fastest">Fastest</div>
+          <div class="flight-details">
+            <div class="time">05:45 - 08:25</div>
+            <div class="duration">02h 40m | Non-stop</div>
+            <div class="price"><span class="strikethrough">$234.33</span> $104.61</div>
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flight Search Section -->
+    <div class="flight-search">
+      <h1>Select Flight</h1>
+      <p>20 Flights found for your trip</p>
+
+      <!-- Flight Card 1 -->
+      <div class="flight-card">
+        <div class="flight-info">
+          <p class="flight-number">AI 2815</p>
+          <p class="flight-time">07:20 - 10:00</p>
+          <p class="duration">2H 40M | Nonstop</p>
+          <button class="details-btn">View Flight Details</button>
+        </div>
+        <div class="flight-pricing">
+          <div class="pricing economy">
+            <p>Economy</p>
+            <p class="price"><span class="strikethrough">$96.86</span> $0</p>
+            <button class="select-btn">Select</button>
+          </div>
+          <div class="pricing premium-economy">
+            <p>Premium Economy</p>
+            <p class="price"><span class="strikethrough">$120.14</span> $0</p>
+            <button class="select-btn">Select</button>
+          </div>
+          <div class="pricing business">
+            <p>Business</p>
+            <p class="price"><span class="strikethrough">$403.17</span> $283.02</p>
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Card 2 -->
+      <div class="flight-card">
+        <div class="flight-info">
+          <p class="flight-number">AI 2819</p>
+          <p class="flight-time">14:10 - 16:50</p>
+          <p class="duration">2H 40M | Nonstop</p>
+          <button class="details-btn">View Flight Details</button>
+        </div>
+        <div class="flight-pricing">
+          <div class="pricing economy">
+            <p>Economy</p>
+            <p class="price"><span class="strikethrough">$124.27</span> $0</p>
+            <button class="select-btn">Select</button>
+          </div>
+          <div class="pricing premium-economy">
+            <p>Premium Economy</p>
+            <p class="price"><span class="strikethrough">$130.73</span> $0</p>
+            <button class="select-btn">Select</button>
+          </div>
+          <div class="pricing business">
+            <p>Business</p>
+            <p class="price"><span class="strikethrough">$478.93</span> $348.20</p>
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Card 3 -->
+      <div class="flight-card">
+        <div class="flight-info">
+          <p class="flight-number">AI 2801</p>
+          <p class="flight-time">09:05 - 11:50</p>
+          <p class="duration">2H 45M | Nonstop</p>
+          <button class="details-btn">View Flight Details</button>
+        </div>
+        <div class="flight-pricing">
+          <div class="pricing economy">
+            <p>Economy</p>
+            <p class="price"><span class="strikethrough">$158.27</span> $0</p>
+            <button class="select-btn">Select</button>
+          </div>
+          <div class="pricing premium-economy">
+            <p>Premium Economy</p>
+            <p class="price"><span class="strikethrough">$198.73</span> $0</p>
+            <button class="select-btn">Select</button>
+          </div>
+          <div class="pricing business">
+            <p>Business</p>
+            <p class="price"><span class="strikethrough">$771.40</span> $572.67</p>
+            <button class="select-btn">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container-footer">
+      <p>&copy; BWers Airlines</p>
+    </div>
+  </footer>
+
+  <script src="availability.js"></script>
+</body>
+
+</html>

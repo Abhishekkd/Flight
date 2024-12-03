@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="../icons8-flight-100.png" alt="Logo" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Flights</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">My Account</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- User Info Section -->
+            <div class="user-info">
+                <img src="../woman-user-color-icon.svg" alt="User" class="user-img">
+                <span class="user-name">John Doe</span>
+                <button class="logout-btn">Logout</button>
+            </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="flight-details-header">
+            <div class="flight-date">
+                <p>FRI, 13 DEC 24</p>
+              </div>
+              <div class="flight-route">
+                <div class="origin">
+                  <p class="airport-code">DEL</p>
+                </div>
+                <div class="route-info">
+                  <span class="plane-icon">✈️</span>
+                  <span class="separator">-------</span>
+                  <span class="info-text">Departure</span>
+                  <span class="separator">-------</span>
+                  <span class="plane-icon">✈️</span>
+                </div>
+                <div class="destination">
+                  <p class="airport-code">BLR</p>
+                </div>
+              </div>
+              <div class="flight-date">
+                <p>2ADT Passengers</p>
+              </div>
+      </div>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container-pay">
+            <!-- Payment Options -->
+            <div class="payment-options">
+                <h2>Select Payment Method</h2>
+                <div class="payment-methods">
+                    <!-- Payment Option: Credit Card -->
+                    <div class="payment-method" onclick="togglePaymentDetails('credit-card-details')">
+                        <h3>Credit Card</h3>
+                        <div id="credit-card-details" class="payment-details">
+                            <label for="cc-number">Card Number:</label>
+                            <input type="text" id="cc-number" placeholder="Enter card number">
+                            <label for="cc-expiry">Expiry Date:</label>
+                            <input type="text" id="cc-expiry" placeholder="MM/YY">
+                            <label for="cc-cvc">CVC:</label>
+                            <input type="text" id="cc-cvc" placeholder="CVC">
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method" onclick="togglePaymentDetails('bank-transfer-details')">
+                        <h3>Debit Card</h3>
+                        <div id="bank-transfer-details" class="payment-details">
+                            <label for="bank-name">Bank Name:</label>
+                            <input type="text" id="bank-name" placeholder="Enter bank name">
+                            <label for="account-number">Account Number:</label>
+                            <input type="text" id="account-number" placeholder="Enter account number">
+                        </div>
+                    </div>
+
+                    <!-- Payment Option: PayPal -->
+                    <div class="payment-method" onclick="togglePaymentDetails('paypal-details')">
+                        <h3>PayPal</h3>
+                        <div id="paypal-details" class="payment-details">
+                            <label for="paypal-email">Email:</label>
+                            <input type="email" id="paypal-email" placeholder="Enter your PayPal email">
+                        </div>
+                    </div>
+        
+                    <!-- Payment Option: Bank Transfer -->
+                    <div class="payment-method" onclick="togglePaymentDetails('bank-transfer-details')">
+                        <h3>Bank Transfer</h3>
+                        <div id="bank-transfer-details" class="payment-details">
+                            <label for="bank-name">Bank Name:</label>
+                            <input type="text" id="bank-name" placeholder="Enter bank name">
+                            <label for="account-number">Account Number:</label>
+                            <input type="text" id="account-number" placeholder="Enter account number">
+                        </div>
+                    </div>
+                    <div class="payment-method" onclick="togglePaymentDetails('bank-transfer-details')">
+                        <h3>UPI</h3>
+                        <div id="bank-transfer-details" class="payment-details">
+                            <label for="bank-name">Bank Name:</label>
+                            <input type="text" id="bank-name" placeholder="Enter bank name">
+                            <label for="account-number">Account Number:</label>
+                            <input type="text" id="account-number" placeholder="Enter account number">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="info">
+                <!-- Booking Details -->
+                <div class="booking-details">
+                    <h2>Booking Details</h2>
+                    <div class="detail">
+                        <span class="label">Origin:</span>
+                        <span class="value">Delhi</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Destination:</span>
+                        <span class="value">Bengaluru</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Date:</span>
+                        <span class="value">06/12/2024</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Passengers:</span>
+                        <span class="value">2 Adult</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Seat Selected:</span>
+                        <span class="value">Premium Economy - 12A, 12B</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Price:</span>
+                        <span class="value"><span class="strikethrough">$11,026</span> $0</span>
+                    </div>
+                </div>
+            
+                <!-- Services Added Section -->
+                <div class="services-added">
+                    <h2>Services Added</h2>
+                    <div class="detail">
+                        <span class="label">Cab:</span>
+                        <span class="value">Yes</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Hotel:</span>
+                        <span class="value">Yes</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Meal:</span>
+                        <span class="value">Vegetarian</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Lounge Access:</span>
+                        <span class="value">Yes</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Additional Baggage:</span>
+                        <span class="value">1 Extra Bag</span>
+                    </div>
+                    <div>
+                        <button class="edit-btn" onclick="confirmPayment()">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+              
+    </section>
+
+    <div>
+        <button class="pay-btn" onclick="confirmPayment()">Pay Now</button>
+    </div>
+    <div>
+        <button class="price-btn" onclick="confirmPayment()">Price: $0</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>&copy; BWers Airlines</p>
+        </div>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>
