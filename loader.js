@@ -3,14 +3,18 @@ const urlParams = new URLSearchParams(window.location.search);
 const plan = urlParams.get("plan");
 
 window.onload = function () {
+  const loader = document.getElementById("loader");
+  const confirmationIcon = document.getElementById("confirmation-icon");
   const loaderMessage = document.getElementById("loader-message");
   const planMessage = document.getElementById("plan-message");
 
   // Show "Proceeding to Payment" first
-  loaderMessage.textContent = "Proceeding to Payment...";
+  loaderMessage.textContent = "Proceeding to QuickSilver Payment Page...";
 
-  // After 3 seconds, show "You have subscribed to the Family [Plan Name] Plan!"
+  // After 3 seconds, show "Payment Complete!" and display the check mark
   setTimeout(() => {
+    loader.style.display = "none"; // Hide loader
+    confirmationIcon.style.display = "block"; // Show check mark
     loaderMessage.textContent = "Payment Complete!";
     planMessage.textContent = `You have subscribed to the Family ${plan} Plan!`;
   }, 3000);

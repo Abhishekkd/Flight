@@ -10,9 +10,10 @@ const familyTravelerData = {
   travelHistory: {
     preferredCabin: "PREMIUM ECONOMY",
     mostBookedAncillary: "XBAG",
+    preferredTravelTime: "Morning",
     frequentTrips: [
-      { origin: "NCE", destination: "LON", frequency: "2 trips/year" },
-      { origin: "PAR", destination: "NYC", frequency: "1 trip/year" }
+      { origin: "BLR", destination: "DEL", frequency: "2 trips/year" },
+      { origin: "DEL", destination: "BLR", frequency: "1 trip/year" }
     ]
   }
 };
@@ -40,6 +41,8 @@ function displayFamilyInsights() {
       <h3>Travel History</h3>
       <p><strong>Preferred Cabin:</strong> ${familyTravelerData.travelHistory.preferredCabin}</p>
       <p><strong>Most Booked Ancillary:</strong> ${familyTravelerData.travelHistory.mostBookedAncillary}</p>
+      <p><strong>Preferred Travel Time:</strong> ${familyTravelerData.travelHistory.preferredCabin}</p>
+    
       <p><strong>Frequent Trips:</strong></p>
       <ul>
         ${familyTravelerData.travelHistory.frequentTrips
