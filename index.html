@@ -6,182 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking</title>
     <link rel="stylesheet" href="styles.css">
-<script>
-    window.onload = () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const subscribed = urlParams.get("subscribed");
-        const subscriptionSection = document.getElementById("subscription-section");
-        const upgradeSection = document.getElementById("upgrade-section");
+    <script>
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subscribed = urlParams.get("subscribed");
 
-        if (subscribed === "true") {
-            subscriptionSection.style.display = "none"; // Hide subscription section
-            upgradeSection.style.display = "block"; // Show upgrade section
-        } else {
-            subscriptionSection.style.display = "block"; // Default behavior
-            upgradeSection.style.display = "none";
+            // Get elements
+            const subscriptionSection = document.getElementById("subscription-section");
+            const upgradeSection = document.getElementById("upgrade-section");
+
+            // Validate and toggle visibility
+            if (subscriptionSection && upgradeSection) {
+                if (subscribed === "true") {
+                    subscriptionSection.style.display = "none"; // Hide subscription section
+                    upgradeSection.style.display = "flex"; // Show upgrade section
+                } else {
+                    subscriptionSection.style.display = "flex"; // Show subscription section
+                    upgradeSection.style.display = "none"; // Hide upgrade section
+                }
+            } else {
+                console.error("Subscription or Upgrade section not found in the DOM");
+            }
+        };
+
+        function redirectToSubscription() {
+            window.location.href = "subscription.html";
         }
-    };
 
-    function redirectToSubscription() {
-        window.location.href = "subscription.html";
-    }
-
-    function redirectToUpgrade() {
-        alert("Redirecting to upgrade plans...");
-        // Add redirect logic if upgrade plans are on another page
-    }
-</script>
-
+        function redirectToUpgrade() {
+            alert("Redirecting to upgrade plans...");
+            // Add redirect logic if upgrade plans are on another page
+        }
+    </script>
 </head>
 
 <body>
-<header class="header">
-    <div class="container">
-        <!-- Logo Section -->
-        <div class="logo">
-            <img src="icons8-flight-100.png" alt="Logo" class="logo-img">
+    <header class="header">
+        <div class="container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="icons8-flight-100.png" alt="Logo" class="logo-img">
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Flights</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+            </nav>
+
+            <!-- User Info Section -->
+            <div class="user-info">
+                <img src="woman-user-color-icon.svg" alt="User" class="user-img">
+                <span class="user-name">John Doe</span>
+                <button class="logout-btn">Logout</button>
+            </div>
         </div>
+    </header>
 
-        <!-- Navigation Links -->
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Flights</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">My Account</a></li>
-            </ul>
-        </nav>
+    <main class="main-content">
+        <div class="booking-container">
+            <h2 class="booking-title">Book a Flight</h2>
+            <form class="booking-form">
+                <!-- Trip Type -->
+                <div class="trip-type">
+                    <label class="trip-option">
+                        <input type="radio" name="trip" value="oneway" checked>
+                        <span>One Way</span>
+                    </label>
+                    <label class="trip-option">
+                        <input type="radio" name="trip" value="roundtrip">
+                        <span>Round Trip</span>
+                    </label>
+                    <label class="trip-option">
+                        <input type="radio" name="trip" value="multicity">
+                        <span>Multi City</span>
+                    </label>
+                </div>
 
-        <!-- User Info Section -->
-        <div class="user-info">
-            <img src="woman-user-color-icon.svg" alt="User" class="user-img">
-            <span class="user-name">John Doe</span>
-            <button class="logout-btn">Logout</button>
+                <!-- From and To -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="from">From</label>
+                        <input id="from" type="text" placeholder="Enter departure city" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="to">To</label>
+                        <input id="to" type="text" placeholder="Enter destination" required>
+                    </div>
+                </div>
+
+                <!-- Dates -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="departure">Departure Date</label>
+                        <input id="departure" type="date" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="return">Return Date</label>
+                        <input id="return" type="date" disabled>
+                    </div>
+                </div>
+
+                <!-- Travelers and Payment -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="travelers">Travelers</label>
+                        <select id="travelers" required>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" required>
+                            <option value="cash">Cash</option>
+                            <option value="credit">Credit Card</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Promo Code and Search -->
+                <div class="additional-options">
+                    <a href="#" class="add-promocode">+ Add Promocode</a>
+                    <button type="submit" class="search-btn">Search Flights</button>
+                </div>
+            </form>
+
+            <!-- Subscription Section -->
+            <div id="subscription-section" style="display: none;">
+                <div class="subscribe-section">
+                    <p class="subscribe-section-text">Plan Ahead, Travel Smarter: Exclusive Subscription for Frequent
+                        Flyers!</p>
+                    <div>
+                        <button class="subscribe-btn" onclick="redirectToSubscription()">Subscription Plans</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upgrade Section -->
+            <div id="upgrade-section" style="display: none;" class="upgrade-container">
+                <!-- Pro Plan Details -->
+                <div class="card pro-plan">
+                    <h3><i class="icon icon-current-plan"></i> You're on the Pro Plan</h3>
+                    <p class="subheading">Pro Plan Benefits:</p>
+                    <ul>
+                        <li><i class="icon icon-benefit"></i> 8 Free Round Trips (Save $1200)</li>
+                        <li><i class="icon icon-benefit"></i> Discount on Remaining Trips (Save $180)</li>
+                        <li><i class="icon icon-benefit"></i> Seat Selection Fee Waiver (Save $160)</li>
+                    </ul>
+                    <p class="savings-highlight">Net Savings: <span class="highlight">$690/year</span> (27%)</p>
+                </div>
+
+                <!-- Elite Plan Details -->
+                <div class="card elite-plan">
+                    <h3><i class="icon icon-upgrade"></i> Upgrade to Elite Plan</h3>
+                    <p class="subheading">Elite Plan Benefits:</p>
+                    <ul>
+                        <li><i class="icon icon-benefit"></i> Unlimited Round Trips (Save $2400)</li>
+                        <li><i class="icon icon-benefit"></i> Premium Economy Upgrades (Save $200)</li>
+                        <li><i class="icon icon-benefit"></i> Seat Selection Fee Waiver (Save $160)</li>
+                    </ul>
+                    <p class="savings-highlight">Net Savings: <span class="highlight">$1460/year</span> (57%)</p>
+                    <button class="upgrade-btn" onclick="redirectToUpgrade()">Upgrade to Elite Plan</button>
+                </div>
+            </div>
         </div>
-    </div>
-</header>
+    </main>
 
-<main class="main-content">
-    <div class="booking-container">
-        <h2 class="booking-title">Book a Flight</h2>
-        <form class="booking-form">
-            <!-- Trip Type -->
-            <div class="trip-type">
-                <label>
-                    <input type="radio" name="trip" value="oneway" id="oneway" checked> One Way
-                </label>
-                <label>
-                    <input type="radio" name="trip" value="roundtrip" id="roundtrip"> Round Trip
-                </label>
-                <label>
-                    <input type="radio" name="trip" value="multicity" id="multicity"> Multi City
-                </label>
-            </div>
-
-            <!-- From & To -->
-            <div class="input-group">
-                <div class="input-field">
-                    <label for="from">From</label>
-                    <input id="from" type="text" placeholder="Delhi, DEL" required>
-                </div>
-                <div class="input-field">
-                    <label for="to">To</label>
-                    <input id="to" type="text" placeholder="Going to?" required>
-                </div>
-            </div>
-
-            <!-- Departure & Return -->
-            <div class="input-group">
-                <div class="input-field">
-                    <label for="departure">Departure</label>
-                    <input id="departure" type="date" required>
-                </div>
-                <div class="input-field">
-                    <label for="return">Return</label>
-                    <input id="return" type="date">
-                </div>
-            </div>
-
-            <!-- Travelers and Payment -->
-            <div class="input-group">
-                <div class="input-field">
-                    <label for="travelers">Travelers</label>
-                    <select id="travelers" required>
-                        <option value="1">1 Passenger</option>
-                        <option value="2">2 Passengers</option>
-                        <option value="3">3 Passengers</option>
-                    </select>
-                </div>
-                <div class="input-field">
-                    <label for="payment">Pay with</label>
-                    <select id="payment" required>
-                        <option value="cash">Cash</option>
-                        <option value="credit">Credit Card</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Additional Options -->
-            <div class="additional-options">
-                <a href="#">+ ADD PROMOCODE</a>
-                <button type="submit" class="subscribe-btn">Search</button>
-            </div>
-
-        </form>
-
-<div id="subscription-section">
-    <!-- Existing Subscription Section -->
-    <div class="subscribe-section">
-        <p class="subscribe-section-text">Plan Ahead, Travel Smarter: Exclusive Subscription for Frequent Flyers!</p>
-        <div>
-            <button class="subscribe-btn" onclick="redirectToSubscription()">Subscription Plans</button>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>&copy; 2024 Flight Booking App</p>
         </div>
-    </div>
-</div>
-
-<div class="upgrade-container">
-  <!-- Pro Plan Details -->
-  <div class="card pro-plan">
-    <h3><i class="icon icon-current-plan"></i> You're on the Pro Plan</h3>
-    <p class="subheading">Pro Plan Benefits:</p>
-    <ul>
-      <li><i class="icon icon-benefit"></i> 8 Free Round Trips (Save $1200)</li>
-      <li><i class="icon icon-benefit"></i> Discount on Remaining Trips (Save $180)</li>
-      <li><i class="icon icon-benefit"></i> Seat Selection Fee Waiver (Save $160)</li>
-    </ul>
-    <p class="savings-highlight">Net Savings: <span class="highlight">$690/year</span> (27%)</p>
-  </div>
-
-  <!-- Elite Plan Details -->
-  <div class="card elite-plan">
-    <h3><i class="icon icon-upgrade"></i> Upgrade to Elite Plan</h3>
-    <p class="subheading">Elite Plan Benefits:</p>
-    <ul>
-      <li><i class="icon icon-benefit"></i> Unlimited Round Trips (Save $2400)</li>
-      <li><i class="icon icon-benefit"></i> Premium Economy Upgrades (Save $200)</li>
-      <li><i class="icon icon-benefit"></i> Seat Selection Fee Waiver (Save $160)</li>
-    </ul>
-    <p class="savings-highlight">Net Savings: <span class="highlight">$1460/year</span> (57%)</p>
-    <button class="upgrade-btn">Upgrade to Elite Plan</button>
-  </div>
-</div>
-
-
-
-
-
-    </div>
-</main>
-
-
-
-<footer class="footer">
-    <div class="container-footer">
-        <p>&copy; 2024 Flight Booking App</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    </footer>
 </body>
 
 </html>
