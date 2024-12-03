@@ -658,3 +658,145 @@ body {
     }
 }
 
+/* Upgrade Section */
+.upgrade-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(135deg, #ffffff, #f7f9fc);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+.card h3 {
+    font-size: 1.8rem;
+    color: #004a45;
+    margin-bottom: 45px;
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .subheading {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+.card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.card ul li {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Icons */
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+
+.icon-current-plan {
+    background-image: url('current-plan-icon.svg');
+}
+
+.icon-upgrade {
+    background-image: url('upgrade-icon.svg');
+}
+
+.icon-benefit {
+    background-image: url('benefit-icon.svg');
+}
+
+/* Savings Highlight */
+.savings-highlight {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 15px;
+}
+
+.savings-highlight .highlight {
+    color: #1abc9c;
+    font-size: 1.5rem;
+}
+
+/* Upgrade Button */
+.upgrade-btn {
+    display: block;
+    margin: 20px auto 10px;
+    background: linear-gradient(135deg, #004a45, #00665b);
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.upgrade-btn:hover {
+    background: linear-gradient(135deg, #00665b, #004a45);
+    transform: translateY(-3px);
+}
+
+.upgrade-btn:active {
+    transform: translateY(1px);
+}
+
+/* Explore Link */
+.explore-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.explore-link a {
+    color: #004a45;
+    font-size: 1rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.explore-link a:hover {
+    color: #00665b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upgrade-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
