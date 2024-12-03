@@ -16,7 +16,6 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="subscription.html">Solo Plans</a></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Flights</a></li>
                     <li><a href="#">Deals</a></li>
@@ -34,15 +33,29 @@
     <main class="main-content">
         <div class="subscription-container">
             <section class="traveler-insights">
-                <h2>Traveler Insights</h2>
+                <h2>Family Traveler Insights</h2>
                 <div class="insight-cards">
+                    <!-- Family Profile Card -->
                     <div class="insight-card">
-                        <h3>Traveler Profile</h3>
-                        <p><strong>Family Size:</strong> 2 Adults, 2 Children</p>
+                        <h3>Family Profile</h3>
+                        <p><strong>Adults:</strong> 2</p>
+                        <p><strong>Children:</strong> 2</p>
+                        <p><strong>Seat Preference:</strong> WINDOW and AISLE</p>
+                        <p><strong>Meal Preferences:</strong> VGML, CHML</p>
+                        <p><strong>Baggage:</strong> 2 Carry-On, 4 Checked</p>
+                    </div>
+
+                    <!-- Family Travel History Card -->
+                    <div class="insight-card">
+                        <h3>Travel History</h3>
                         <p><strong>Preferred Cabin:</strong> PREMIUM ECONOMY</p>
-                        <p><strong>Seat Preference:</strong> WINDOW</p>
-                        <p><strong>Meal Preference:</strong> VGML (Vegetarian Meal)</p>
-                        <p><strong>Baggage:</strong> 1 Carry-On, 2 Checked</p>
+                        <p><strong>Most Booked Ancillary:</strong> XBAG</p>
+                        <p><strong>Preferred Travel Class:</strong> Y</p>
+                        <p><strong>Frequent Trips:</strong></p>
+                        <ul>
+                            <li>NCE to LON (2 trips per year)</li>
+                            <li>PAR to NYC (1 trip per year)</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -54,13 +67,13 @@
                     <h3>Basic Plan</h3>
                     <p class="price">
                         <span class="original-price">$2560</span>
-                        <span class="discounted-price">$550/year</span>
+                        <span class="discounted-price">$2170/year</span>
                     </p>
                     <button class="btn-buy" onclick="subscribe('Basic')">Buy Now →</button>
                     <ul class="benefits">
-                        <li><span>4 free round trips for any group member</span></li>
-                        <li><span>10% discount on remaining trips (12 trips)</span></li>
-                        <li><span>Free seat selection for all group members</span></li>
+                        <li>4 free round trips for any group member (Savings: $600)</li>
+                        <li>Discount on remaining trips (12 trips): $1620 (Savings: $180)</li>
+                        <li>Seat selection fees: Saves $160</li>
                     </ul>
                     <div class="highlight-savings">
                         <p><strong>Net Savings: <span class="savings-highlight">$390/year (15% savings)</span></strong>
@@ -73,14 +86,14 @@
                     <h3>Pro Plan</h3>
                     <p class="price">
                         <span class="original-price">$2560</span>
-                        <span class="discounted-price">$850/year</span>
+                        <span class="discounted-price">$1870/year</span>
                     </p>
                     <div class="badge">Most Popular</div>
                     <button class="btn-buy" onclick="subscribe('Pro')">Buy Now →</button>
                     <ul class="benefits">
-                        <li><span>8 free round trips for any group member</span></li>
-                        <li><span>15% discount on remaining trips (8 trips)</span></li>
-                        <li><span>Free seat selection and priority boarding for all group members</span></li>
+                        <li>8 free round trips for any group member (Savings: $1200)</li>
+                        <li>Discount on remaining trips (8 trips): $1020 (Savings: $180)</li>
+                        <li>Seat selection fees: Saves $160</li>
                     </ul>
                     <div class="highlight-savings">
                         <p><strong>Net Savings: <span class="savings-highlight">$690/year (27% savings)</span></strong>
@@ -97,9 +110,9 @@
                     </p>
                     <button class="btn-buy" onclick="subscribe('Elite')">Buy Now →</button>
                     <ul class="benefits">
-                        <li><span>Unlimited free round trips for the family</span></li>
-                        <li><span>4 free upgrades to premium economy</span></li>
-                        <li><span>Free seat selection and priority boarding for all members</span></li>
+                        <li>Unlimited free round trips (16 tickets/year, Savings: $2400)</li>
+                        <li>Premium economy upgrades (4 trips): Saves $200</li>
+                        <li>Seat selection fees: Saves $160</li>
                     </ul>
                     <div class="highlight-savings">
                         <p><strong>Net Savings: <span class="savings-highlight">$1460/year (57% savings)</span></strong>
@@ -111,7 +124,7 @@
     </main>
 
     <footer class="footer">
-        <div class="container-footer">
+        <div class="container">
             <p>&copy; 2024 Flight Booking App</p>
         </div>
     </footer>
