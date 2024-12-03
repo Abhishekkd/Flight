@@ -55,5 +55,7 @@ function displayFamilyInsights() {
 }
 
 function subscribe(plan) {
-  alert(`You have subscribed to the Family ${plan} Plan!`);
+  // Redirect to the loader page with the selected plan as a query parameter
+  window.location.href = `loader.html?plan=${plan}`;
 }
+

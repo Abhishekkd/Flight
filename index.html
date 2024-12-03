@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking</title>
     <link rel="stylesheet" href="styles.css">
+<script>
+    window.onload = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const subscribed = urlParams.get("subscribed");
+        const subscriptionSection = document.getElementById("subscription-section");
+        const upgradeSection = document.getElementById("upgrade-section");
+
+        if (subscribed === "true") {
+            subscriptionSection.style.display = "none"; // Hide subscription section
+            upgradeSection.style.display = "block"; // Show upgrade section
+        } else {
+            subscriptionSection.style.display = "block"; // Default behavior
+            upgradeSection.style.display = "none";
+        }
+    };
+
+    function redirectToSubscription() {
+        window.location.href = "subscription.html";
+    }
+
+    function redirectToUpgrade() {
+        alert("Redirecting to upgrade plans...");
+        // Add redirect logic if upgrade plans are on another page
+    }
+</script>
+
 </head>
 
 <body>
@@ -103,12 +129,25 @@
 
         </form>
 
-            <div class="subscribe-section">
-                <p class="subscribe-section-text">Plan Ahead, Travel Smarter: Exclusive Subscription for Frequent Flyers!</p>
-                <div>
-                    <button class="subscribe-btn" onclick="redirectToSubscription()">Subscription Plans</button>
-                </div>
-            </div>
+<div id="subscription-section">
+    <!-- Existing Subscription Section -->
+    <div class="subscribe-section">
+        <p class="subscribe-section-text">Plan Ahead, Travel Smarter: Exclusive Subscription for Frequent Flyers!</p>
+        <div>
+            <button class="subscribe-btn" onclick="redirectToSubscription()">Subscription Plans</button>
+        </div>
+    </div>
+</div>
+
+<div id="upgrade-section" style="display: none;">
+    <!-- Upgrade Section (Styled Same as Subscription Section) -->
+    <div class="subscribe-section">
+        <p class="subscribe-section-text">Enhance Your Travel Experience: Upgrade Your Plan Today!</p>
+        <div>
+            <button class="subscribe-btn" onclick="redirectToUpgrade()">Upgrade Plans</button>
+        </div>
+    </div>
+</div>
     </div>
 </main>
 
