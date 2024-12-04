@@ -19,7 +19,7 @@ form.addEventListener('submit', event => {
   alert('Searching for flights...');
 });
 
-function redirectToSubscription() {
-  window.location.href = "subscription.html";
-}
+// function redirectToSubscription() {
+//   window.location.href = "family-subscription.html";
+// }
 
